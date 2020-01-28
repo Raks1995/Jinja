@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% block title %}
+        {% endblock title %}
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+
+    <body>
+        <h1>Let's try out Jinja!</h1>
+        <p>
+            <a href="/">Home</a>,
+            <a href="/about-me">About me</a>
+        </p>
+        {% block content %}
+        {% endblock content %}
+        {% for city in cities %}
+            <p>{{city}}</p>
+        {% endfor %}
+        {% if cities %}
+            <p>Cities exist.</p>
+        {% else %}
+            <p>Cities don't exist.</p>
+        {% endif %}
+            </body>
+</html>

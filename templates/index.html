@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>Hello</p>
+    <p>{{some_text}}</p>
+    <p>{{time}}</p>
+{% endblock content %}
+{% block title %}
+    <title>Naslovnica</title>
+{% endblock title %}
+{% for city in cities %}
+    <p>{{city}}</p>
+{% endfor %}
+{% if cities %}
+    <p>Cities exist.</p>
+{% else %}
+    <p>Cities don't exist.</p>
+{% endif %}

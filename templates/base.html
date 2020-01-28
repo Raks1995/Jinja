@@ -23,5 +23,22 @@
         {% else %}
             <p>Cities don't exist.</p>
         {% endif %}
-            </body>
+        <table>
+            <tr>
+                {% for ucenik in ucenici %}
+                    <th>{{ucenik}}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for city in cities %}
+                    <td>{{city}}</td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for prosjek in prosjeci %}
+                    <td>{{prosjek}}</td>
+                {% endfor %}
+            </tr>
+        </table>
+    </body>
 </html>

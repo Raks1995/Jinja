@@ -16,3 +16,12 @@
 {% else %}
     <p>Cities don't exist.</p>
 {% endif %}
+{% for ucenik in ucenici %}
+    <th>{{ucenik}}</th>
+{% endfor %}
+{% for city in cities %}
+    <td>{{city}}</td>
+{% endfor %}
+{% for prosjek in prosjeci %}
+    <td>{{prosjek}}</td>
+{% endfor %}

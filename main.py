@@ -8,8 +8,10 @@ app = Flask(__name__)
 def index():
     some_text = "Hello, it's me."
     time = datetime.datetime.now()
+    ucenici = ["Ivan", "Josip", "Marko", "Ante"]
     cities = ["Zagreb", "Madrid", "Vienna", "Beograd"]
-    return render_template("index.html", some_text=some_text, time=time, cities=cities)
+    prosjeci = ["4.0", "3.4", "4.3", "2.2"]
+    return render_template("index.html", some_text=some_text, time=time, cities=cities, ucenici=ucenici, prosjeci=prosjeci)
 
 
 @app.route("/about-me")

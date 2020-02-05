@@ -1,27 +1,18 @@
 {% extends "base.html" %}
 
+{% block title %}
+    <title>Naslovnica</title>
+{% endblock title %}
 {% block content %}
     <p>Hello</p>
     <p>{{some_text}}</p>
     <p>{{time}}</p>
-{% endblock content %}
-{% block title %}
-    <title>Naslovnica</title>
-{% endblock title %}
-{% for city in cities %}
-    <p>{{city}}</p>
-{% endfor %}
 {% if cities %}
     <p>Cities exist.</p>
 {% else %}
     <p>Cities don't exist.</p>
 {% endif %}
-{% for ucenik in ucenici %}
-    <th>{{ucenik}}</th>
-{% endfor %}
 {% for city in cities %}
-    <td>{{city}}</td>
+    <p>{{city}}</p>
 {% endfor %}
-{% for prosjek in prosjeci %}
-    <td>{{prosjek}}</td>
-{% endfor %}
+{% endblock content %}

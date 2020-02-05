@@ -1,8 +1,21 @@
 {% extends "base.html" %}
 
-{% block content %}
-<p>More about me!</p>
-{% endblock content %}
 {% block title %}
 <title>Ivan</title>
 {% endblock title %}
+
+{% block content %}
+{% if name %}
+<p>Hello {{name}}!</p>
+{% endif %}
+<br>
+<form method="post" action="/about-me">
+    <input type="text" name="contact-name" placeholder="Enter your username:">
+    <br>
+    <input type="email" name="contact-email" placeholder="Enter your email:">
+    <br>
+    <input type="password" name="contact-password" placeholder="Enter your password:">
+    <br>
+    <button type="submit">Submit</button>
+</form>
+{% endblock content %}

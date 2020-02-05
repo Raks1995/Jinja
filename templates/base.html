@@ -15,14 +15,6 @@
         </p>
         {% block content %}
         {% endblock content %}
-        {% for city in cities %}
-            <p>{{city}}</p>
-        {% endfor %}
-        {% if cities %}
-            <p>Cities exist.</p>
-        {% else %}
-            <p>Cities don't exist.</p>
-        {% endif %}
         <table>
             <tr>
                 {% for ucenik in ucenici %}
